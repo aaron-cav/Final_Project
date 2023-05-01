@@ -1,3 +1,8 @@
+'''this is Aaron's code. i used nueralnine's backtracking tutorial to help me with this skill
+this tutroial is found on youtube'''
+
+'''this method is used to backtrack all the open cells to see if a number 
+that is placed in them is valid and flollows all the rules of sodoku'''
 def is_valid(grid, row, col, num):
 
     for x in range(9):
@@ -15,6 +20,8 @@ def is_valid(grid, row, col, num):
 
     return True
 
+'''this is the main method  used to solve to soduko puzzle. here the method will 
+check the cells to see if they have an empty space or prexisting parameter in them'''
 def solve(grid, row, col):
     if col == 9:
         if row == 8:
@@ -32,15 +39,15 @@ def solve(grid, row, col):
         grid[row][col] =0
     return False
 
-grid = [[0,0,0,0,0,0,6,8,0],
-        [0,0,0,0,7,3,0,0,9],
-        [3,0,9,0,0,0,0,4,5],
-        [4,9,0,0,0,0,0,0,0],
-        [8,0,3,0,5,0,9,0,2],
-        [0,0,0,0,0,0,0,3,6],
-        [9,6,0,0,0,0,3,0,8],
-        [7,0,0,6,8,0,0,0,0],
-        [0,2,8,0,0,0,0,0,0],]
+grid = [[0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0]]
 
 if solve(grid, 0, 0):
     for i in range(9):
